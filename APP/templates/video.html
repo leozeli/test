@@ -1,0 +1,18 @@
+{% extends 'bootstrap/base.html' %}
+{% block styles %}
+{{super()}}
+<link rel="stylesheet"href="{{url_for('static', filename='style.css')}}">
+{% endblock %}
+{% block content %}
+  <body>
+    <div>
+    <h1>Video Streaming Demonstration</h1>
+    <img src="{{ url_for('first_blue.video_feed') }}">
+  </div>
+  </body>
+<footer>
+<img alt="Walking Totoro" class="totoro" src="{{ url_for('static', filename='logo.png') }}">
+<small>&copy; 2020 <a href="#">BigData</a></small>
+</footer>
+</body>
+{% endblock %}
